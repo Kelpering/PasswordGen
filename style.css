@@ -1,0 +1,29 @@
+#page
+{
+
+}
+
+#main
+{
+
+}
+
+#hidden
+{
+    display:none;
+}
+
+div
+{
+    border: 1px solid;
+}
+
+textarea
+{
+    resize:none;
+}
+
+button
+{
+    display:block;
+}

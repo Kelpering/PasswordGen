@@ -13,6 +13,19 @@
     <!-- non-centered 'Generate a Password', 1 smaller than prev header -->
     <!-- Text box with borders, dashed, greyish "our Secure Password" before written to, centered -->
     <!-- Outside of text box div, red, rounded button, "Generate Password" -->
+    <div id="page"> <!--Entire page, width and height 100%-->
+        <h1>Password Generator</h1>
+        <div id="main"> <!-- Main page, has generate password header-->
+            <h2>Generate a Password</h2>
+            <textarea name="output" rows="10" cols="30">tset</textarea> <!--Fix sizes later-->
+            <button id="start">Generate Password</button>
+            <!-- This div will replace button, a button at the bottom for submission will also be present. -->
+            <div id="hidden">
+                <!-- form goes here -->
+                <p>form</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="script.js">
