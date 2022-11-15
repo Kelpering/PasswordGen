@@ -1,29 +1,63 @@
 #page
 {
-
+    margin: auto;
+    width:70%;
+    padding: 10px;
 }
 
 #main
 {
+    padding:10px;
+    padding-left:20px;
+    padding-right:20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border:0px solid;
+    border-radius:10px;
+    text-align:center;
+}
 
+#content
+{
+    margin:auto;
+    text-align:left;
+    width:90%;
 }
 
 #hidden
 {
     /* display:none; */
+    text-align:center;
 }
 
-div
+#headerMain
 {
-    border: 1px solid;
+    text-align:center;
+}
+
+
+h1, h2
+{
+color:slategrey;
 }
 
 textarea
 {
     resize:none;
+    text-align:center;
+    border:2px dashed slategrey;
+    width:100%;
+    
 }
 
 button
 {
     display:block;
+    margin: 15px auto 15px auto;
+    background-color:red;
+    color: white;
+    border-style:none;
+    border-radius:100px;
+    height:35px;
+    width:30%;
+    font-size:15px;
 }
