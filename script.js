@@ -23,12 +23,7 @@ var output = "";
 var text = "Your New Password |" + output +"|"
 
 document.getElementById("output").value = text;
-var form = document.getElementById("myForm");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
 
-//Lowercase - special are all checkmarks
-//Length is a dropdown box of 8-128 characters for a password
 //Functions
 
 function toggleHide(id)
@@ -61,16 +56,11 @@ function password()
 
     for (var i = 0; i<length; i++)
     {
-        
-        //random value from 0-arr.length
-        var selected = matrix[random(0,choices.length)];
-        console.log(selected.length);
+        //selected is a random choice between all chosen checkmarks, so lowercase, uppercase, special, numbers
+        var selected = matrix[choices[random(0, choices.length - 1)]];
+        //outputted is a random choice within these arrays; a, b, c, etc if lowercase is chosen
         output += selected[random(0, selected.length)];
-        //choice corresponds to matrix of values
-        //get random number from 0-matrix.arr.length
-        //input that choice into output
-        //when ended, display on textarea
-        //output+=selected character
+
     }
     text = "Your New Password |" + output +"|"
     document.getElementById("output").value = text;
