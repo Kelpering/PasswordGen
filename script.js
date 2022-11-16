@@ -23,6 +23,9 @@ var output = "";
 var text = "Your New Password |" + output +"|"
 
 document.getElementById("output").value = text;
+var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
 
 //Lowercase - special are all checkmarks
 //Length is a dropdown box of 8-128 characters for a password
@@ -43,3 +46,32 @@ function toggleHide(id)
 
 function show(id) {document.getElementById(id).style.display = "block";}
 function hide(id) {document.getElementById(id).style.display = "none";}
+function random(min, max) {return Math.floor(Math.random() * (max - min) + min);} 
+function password()
+{
+    console.log("called");
+
+    output = "";
+    length = document.getElementById("quantity").value;
+    if (document.getElementById('lowercase').checked == true) {choices.push(0)}
+    if (document.getElementById('uppercase').checked == true) {choices.push(1)}
+    if (document.getElementById('numbers').checked == true) {choices.push(2)}
+    if (document.getElementById('special').checked == true) {choices.push(3)}
+    if (choices.length == 0) {return false;}
+
+    for (var i = 0; i<length; i++)
+    {
+        
+        //random value from 0-arr.length
+        var selected = matrix[random(0,choices.length)];
+        console.log(selected.length);
+        output += selected[random(0, selected.length)];
+        //choice corresponds to matrix of values
+        //get random number from 0-matrix.arr.length
+        //input that choice into output
+        //when ended, display on textarea
+        //output+=selected character
+    }
+    text = "Your New Password |" + output +"|"
+    document.getElementById("output").value = text;
+}
