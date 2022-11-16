@@ -6,23 +6,15 @@
 </head>
 
 <body>
-
-<!-- To Do -->
-    <!-- "Password Generator" h1-2, centered -->
-    <!-- div that looks like box -->
-    <!-- non-centered 'Generate a Password', 1 smaller than prev header -->
-    <!-- Text box with borders, dashed, greyish "our Secure Password" before written to, centered -->
-    <!-- Outside of text box div, red, rounded button, "Generate Password" -->
-    <div id="page"> <!--Entire page, width and height 100%-->
+<div id="page">
         <h1 id="headerMain">Password Generator</h1>
-        <div id="main"> <!-- Main page, has generate password header-->
+        <div id="main"> 
         <div id="content">
             <h2 id="headerSub">Generate a Password</h2>
-            <textarea name="output" id="output" rows="10" cols="60" value="test" readonly></textarea> <!--Fix sizes later-->
+            <textarea name="output" id="output" rows="10" cols="60" value="test" readonly></textarea>
             <button id="start" onclick="show('hidden'); hide('start');">Generate Password</button>
-            <!-- This div will replace button, a button at the bottom for submission will also be present. -->
+            
             <div id="hidden">
-                <!-- form goes here -->
                 <form id= "myForm" onsubmit="password(); return false;">
                     <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
                     <label for="lowercase">Use Lowercase Letters</label>
@@ -36,31 +28,18 @@
                     <input type="checkbox" id="special" name="special" value="special">
                     <label for="lowercase">Use Special Characters</label>
                     <br>
-                    <!-- edit later -->
                     <label for="quantity" name="quantity">Length of Password</label>
                     <input type="number" id="quantity" name="quantity" min="8" max="128" required>
                     <br>
                     <input type="submit" id="submit" value="Submit Password">
-                    <!-- The submit does not work properly -->
                 </form>
-            </div>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 <script src="script.js">
-//Functions and descriptions
-    //Toggle(id of element) will hide element if shown, vice versa
-    //Show(id of element) only shows the element, no reverse
-    //Hide(id of element) only hides the element, no reverse
 
-//To Do
-    //On button click, reveal panel of options
-    //Submit button
-    //Hide panel
-    //Generate password off of those options
-    //Write to Text box
-    //Repeatable
 </script>
 </html>

@@ -16,8 +16,7 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 const uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 const special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "[", "]", "{", "}", "+", ",", ".", "/", ":", ";", "<", ">", "=", "?", "\\", "`", "|", "~"];
-const matrix = [lowercase, uppercase, numbers, special]; //Choices will activate and deactivate which numbers can be used.
-var choices = []; //Add numbers of choices here. 0, 1, 2, 3 for lowercase, uppercase, numbers, special
+const matrix = [lowercase, uppercase, numbers, special];
 var length;
 var output = "";
 var text = "Your New Password |" + output +"|"
@@ -45,7 +44,7 @@ function random(min, max) {return Math.floor(Math.random() * (max - min) + min);
 function password()
 {
     console.log("called");
-
+    choices = [];
     output = "";
     length = document.getElementById("quantity").value;
     if (document.getElementById('lowercase').checked == true) {choices.push(0)}
@@ -57,7 +56,7 @@ function password()
     for (var i = 0; i<length; i++)
     {
         //selected is a random choice between all chosen checkmarks, so lowercase, uppercase, special, numbers
-        var selected = matrix[choices[random(0, choices.length - 1)]];
+        var selected = matrix[choices[random(0, choices.length)]];
         //outputted is a random choice within these arrays; a, b, c, etc if lowercase is chosen
         output += selected[random(0, selected.length)];
 
